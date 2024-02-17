@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@shadcn/ui": "^0.0.4",
+    "@supabase/supabase-js": "^2.39.6"
+  }
+}
