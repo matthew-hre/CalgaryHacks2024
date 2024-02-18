@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 
-export const createClient = () => {
+export const createClient = (schema = "public") => {
   const cookieStore = cookies();
 
   return createServerClient(
@@ -30,6 +30,9 @@ export const createClient = () => {
             // user sessions.
           }
         },
+      },
+      db: {
+        schema,
       },
     }
   );

@@ -20,11 +20,11 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       className={cn(
-        "min-h-screen bg-background font-sans antialiased",
+        "min-h-screen font-sans antialiased max-w-screen-sm mx-auto px-4",
         inter.variable
       )}
     >
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} min-h-screen`}>{children}</body>
     </html>
   );
 }
